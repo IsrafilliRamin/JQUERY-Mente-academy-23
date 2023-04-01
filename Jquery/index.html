@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery (JS-Kitabxanasi)</title>
+  </head>
+  <body>
+   
+    <p></p>
+    <p class="p"></p>
+    <p id="p"></p>
+    <p id="p" class="p"></p>
+
+    <div id="screen-width"></div>
+    <div id="screen-height"></div>
+    <!-- <div>JS</div> -->
+
+    <!-- CDN ile istifade etmek -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Jquery fayli yukleyerek istifade etmek -->
+    <!--  <script src="jquery-3.6.4.min.js"></script> -->
+
+    <script>
+      /* Jquery $ ile yazilir, Jquery yazilis Formasi */
+
+      $(document).ready(function () {});
+
+      /* Jquery qisa yazilis Formasi */
+
+      $(function () {});
+
+      /* Teqler ve klaslari Jquery ile tutmaq */
+
+      $(function () {
+        $("p").click(function(){});
+        $(".p").click(function(){});
+        $("#p").click(function(){});
+        $("#p .p").click(function(){});
+        /* Atributlari tutmaq */
+        $("[href]").click(function(){});
+        $("[id]").click(function(){});
+        $("[class]").click(function(){});
+      });
+
+    /* Eventler */
+    $(function () {
+        $("p").click(function(){});
+        $("p").dblclick(function(){});
+        $("div").scroll(function(){});
+        $("form").submit(function(){});
+        $("input").change(function(){});
+        $("p").hover(function(){});
+        $("p").mouseenter(function(){});
+        $("p").mouseleave(function(){});
+        $("input").focus(function(){});
+        $("inputp").blur(function(){});
+        $("input").keypress(function(){});
+        $("p").click(function(){
+            $(this).text("salam");
+        });
+        $("p").click(function(){
+            $("p").text("salam");
+        });
+        $("p").click(function(){
+            $(this).css("color","red");
+        });
+        $("p").click(function(){
+            $("p").hide()
+        });
+      });
+
+      /* Height ve Width olculeri tutmaq olculer deyisdikde. */
+      $(window).on("resize", function () {
+        var screenWidth = $(window).width();
+        var screenHeight = $(window).height();
+        $("#screen-width").text(screenWidth);
+        $("#screen-height").text(screenHeight);
+      });
+
+
+      /* Bir nece emeliyyat etmek */
+      $(function(){
+            $("form").submit((e)=>{
+                e.preventDefault();
+                $(".btn").css("background-color","red")
+                $(".p").text("ela")
+            })
+        })
+
+
+     /*Jquery de $ lari basqa simvolla evez etmek  */
+        /* No Conflict */
+
+        let JQuery = $.noConflict();
+        /* $ lari JQuery adli deyisken ile deyisdik */
+
+    </script>
+  </body>
+</html>
